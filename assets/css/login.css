@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --brown: #e76a04b5;
+    --black: #192a56;
+    --light-color: #666;
+    --font-color: #fff;
+    --btn-color: rgb(41, 99, 215);
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    /* background: var(--font-color); */
+    background-size: auto;
+}
+
+body {
+    background-color: #252525;
+    background: linear-gradient(to right, #e2e2e2, #252525);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    text-decoration: none;
+}
+
+/* signin form */
+.signin-form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
+    padding-top: 140px;
+    background: var(--header-background-color);
+}
+
+.signin-form-container form {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    background: #fff;
+    text-align: center;
+    width: 500px;
+}
+
+.signin-form-container form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.signin-form-container form input,
+.signin-form-container form select {
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 8px 0;
+    background: #eee;
+    border-radius: 5px;
+    border: none;
+}
+
+.signin-form-container form select option {
+    background: var(--font-color);
+}
+
+.signin-form-container form .form-btn {
+    background: #eee;
+    color: rgba(0, 0, 0, .8);
+    text-transform: capitalize;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.signin-form-container form .form-btn:hover {
+    background: var(--btn-color);
+    color: var(--font-color);
+}
+
+.signin-form-container form .method {
+    margin: 0 1rem 0 1rem;
+}
+
+.signin-form-container form .method-action {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--btn-color);
+    text-rendering: optimizeLegibility;
+}
+
+.signin-form-container form .method-action i {
+    color: var(--bg-color);
+    font-size: 22px;
+}
+
+.signin-form-container form p {
+    margin-top: 18px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.signin-form-container form p a {
+    color: var(--btn-color);
+}
+
+.signin-form-container form .error-msg {
+    margin: 10px 0;
+    display: block;
+    background: var(--header-background-color);
+    color: crimson;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.signin-form-container .email,
+.signin-form-container .password {
+    position: relative;
+}
+
+.signin-form-container .email i,
+.signin-form-container .password i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+}
+
+/* Register form */
+.register-form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
+    padding-top: 100px;
+    background: var(--header-background-color);
+}
+
+.register-form-container form {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    background: #fff;
+    text-align: center;
+    width: 500px;
+}
+
+.register-form-container form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.register-form-container form input,
+.register-form-container form select {
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 14px;
+    margin: 8px 0;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.register-form-container form select option {
+    background: #fff;
+}
+
+.register-form-container form .form-btn {
+    background: #eee;
+    color: rgba(0, 0, 0, .8);
+    text-transform: capitalize;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.register-form-container form .form-btn:hover {
+    background: var(--btn-color);
+    color: var(--font-color);
+}
+
+.register-form-container form p {
+    margin-top: 14px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.register-form-container form p a {
+    color: var(--btn-color);
+}
+
+.register-form-container form .error-msg {
+    margin: 10px 0;
+    display: block;
+    background: var(--header-background-color);
+    color: crimson;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.register-form-container .name,
+.register-form-container .email,
+.register-form-container .password,
+.register-form-container .confirm-password {
+    position: relative;
+}
+
+.register-form-container .name i,
+.register-form-container .email i,
+.register-form-container .password i,
+.register-form-container .confirm-password i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+}
