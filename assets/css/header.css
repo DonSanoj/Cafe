@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root {
-    --brown: #e76a04b5;
-    --black: #000;
-    --light-color: #666;
+    /* --bg-color: #0B0C10; */
+    /* --blue: #66FCF1; */
+    --bg-color: #000;
+    --header-background-color: rgba(251, 251, 253, .8);
+    --hover-color: rgba(0, 0, 0, 1);
+    --btn-color: rgb(41, 99, 215);
     --font-color: #fff;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    --form-box-shadow: 0 10px 10px 10px rgb(40, 40, 40, 40);
+    --h2-font: 3rem;
 }
 
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,135 +23,98 @@
     border: none;
     transition: all .2s linear;
     background-attachment: fixed;
-    background-repeat: none;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background: fixed;
+    background-repeat: no-repeat;
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/image/Coffee\ cup.jpg'); */
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
     background-size: auto;
 }
 
-section {
-    padding: 2rem 9%;
-}
-
-section:nth-child(event) {
-    background: #eee;
-}
-
-.sub-heading {
-    text-align: center;
-    color: var(--brown);
-    font-size: 2rem;
-    padding-top: 9rem;
-}
-
-.heading {
-    text-align: center;
-    color: var(--black);
-    font-size: 3rem;
-    padding-bottom: 5rem;
-    text-transform: uppercase;
-}
-
-.btn {
-    margin-top: 5rem;
-    display: inline-block;
-    font-size: 1.7rem;
-    color: #fff;
-    background: var(--brown);
-    border-radius: 3rem;
-    cursor: pointer;
-    padding: 1rem 4rem;
-}
-
-.btn:hover {
-    background: var(--brown);
-    letter-spacing: .1rem;
-}
-
+/* Header */
 header {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    padding: 1rem 7%;
+    width: 100%;
+    background: var(--header-background-color);
+    backdrop-filter: saturate(180%) blur(20px);
+    padding: 1.8rem 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: var(--brown);
-    background: var(--black);
 }
 
 header .logo {
-    color: var(--font-color);
-    font-size: 3.5rem;
+    letter-spacing: .2rem;
+    font-display: swap;
+    color: rgba(0, 0, 0, .8);
+    font-size: 25px;
     font-weight: bolder;
 }
 
 header .logo i {
-    color: var(--font-color);
+    color: var(--hover-color);
 }
 
 header .navbar a {
-    font-size: 1.7rem;
+    font-size: 15px;
+    font-weight: 300;
     border-radius: .5rem;
-    padding: .5rem 1.5rem;
-    color: var(--font-color);
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, .8);
 }
 
+header .navbar a.active,
 header .navbar a:hover {
-    color: var(--font-color);
-    background: var(--brown);
-    padding: 10px 20px;
+    color: var(--hover-color);
 }
 
 header .icons i,
 header .icons a {
+    display: flexbox;
     cursor: pointer;
     margin: .5rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
-    width: 4.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
     text-align: center;
-    font-size: 1.7rem;
-    color: var(--black);
+    font-size: 15px;
+    color: rgba(0, 0, 0, .6);
     border-radius: 50%;
-    background: #eee;
+    /* background: var(--header-background-color); */
+    margin-right: 1.5rem;
 }
 
 header .icons i:hover,
 header .icons a:hover {
-    color: #fff;
-    background: var(--brown);
-    transform: rotate(360deg);
+    color: var(--hover-color);
 }
 
 header .icons #menu-bars {
     display: none;
 }
 
+
+/* Search form */
 #search-form {
     position: fixed;
     top: -110%;
     left: 0;
-    height: 100%;
+    height: 85%;
     width: 100%;
     z-index: 1004;
-    background: rgba(0, 0, 0, .8);
+    background: rgb(40, 40, 40);
+    /* background: transparent;
+    backdrop-filter: blur(20px); */
+    box-shadow: var(--form-box-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,7 +127,7 @@ header .icons #menu-bars {
 
 #search-form #search-box {
     width: 50rem;
-    border-bottom: .1rem solid #ffff;
+    border-bottom: .1rem solid var(--header-background-color);
     padding: 1rem 0;
     color: #fff;
     font-size: 3rem;
@@ -178,22 +146,28 @@ header .icons #menu-bars {
 #search-form label {
     color: #fff;
     font-size: 2rem;
+    cursor: pointer;
+}
+
+#search-form button {
+    background: none;
+    cursor: pointer;
 }
 
 #search-form label:hover {
-    color: var(--brown);
-}
-
-#search-form #close {
-    position: absolute;
     color: #fff;
-    cursor: pointer;
-    top: 2rem;
-    right: 3rem;
-    font-size: 5rem;
 }
 
-/* Media queries For header */
+#search-form #search-form-close {
+    position: absolute;
+    color: var(--header-background-color);
+    cursor: pointer;
+    top: 2.5rem;
+    right: 3rem;
+    font-size: 20px;
+}
+
+/* Media queries */
 
 @media (max-width: 991px) {
     html {
@@ -245,27 +219,8 @@ header .icons #menu-bars {
         margin: 0 1rem;
     }
 
-    .home .home-slider .slide .content h3 {
-        font-size: 5rem;
-    }
-
-    .form_container {
-        left: 60%;
-        top: -320px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 320px;
+    .footer_wrapper {
         width: 100%;
-        transform: translate(-50%, -50%);
-        z-index: 101;
-        padding: 30px;
-        border-radius: 12px;
-        background: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1);
-        transform: scale(0);
-        transition: transform .5s ease;
     }
 
 }
@@ -275,29 +230,10 @@ header .icons #menu-bars {
         font-size: 50%;
     }
 
-    .dishes .box-container .box img {
+    .pop-services .box-container .box img {
         height: auto;
         border-radius: 4rem;
         width: 100%;
-    }
-
-    .form_container {
-        left: 25%;
-        top: -250px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 320px;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        z-index: 101;
-        padding: 30px;
-        border-radius: 12px;
-        background: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1);
-        transform: scale(0);
-        transition: transform .5s ease;
     }
 
 }

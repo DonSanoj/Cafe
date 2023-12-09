@@ -5,20 +5,21 @@
         <div class="footer_links">
 
             <div class="footer_links_column">
-                <div class="footer_links_column_title"><a href="index.php"><span>W&#x039E;&#x042;X&#x039E;L</span></a></div>
+                <div class="footer_links_column_title"><a href="index.php"><span>Cafe Express</span></a></div>
                 <div class="content">
-                    <h3>Always ahead. <br> Always in style.</h3>
+                    <!-- <h3>The coffee is brewed by first roasting the green coffee beans over hot coals in a <br> brazier.
+                    given an opportunity to sample.</h3> -->
                 </div>
             </div>
 
             <div class="footer_links_column">
-                <div class="footer_links_column_title">Services</div>
+                <!-- <div class="footer_links_column_title">Services</div>
                 <a href="#">Graphics & Design</a>
                 <a href="#">Web Development</a>
                 <a href="#">Application Development</a>
                 <a href="#">Video & Animation</a>
                 <a href="#">Content Writing</a>
-                <a href="#">Marketing & Advertising</a>
+                <a href="#">Marketing & Advertising</a> -->
             </div>
 
             <div class="footer_links_column">

@@ -1,10 +1,5 @@
-let menu =  document.querySelector('#menu-bars');
+let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
-
-let form_container = document.querySelector('.form_container');
-let content_btn = document.querySelector('.content-btn');
-let iconClose = document.querySelector('.icon-close');
-let content = document.querySelector('.content');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
@@ -16,22 +11,59 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
+// Search bar toggle
 document.querySelector('#search-icon').onclick = () => {
     document.querySelector('#search-form').classList.toggle('active');
 }
-
-document.querySelector('#close').onclick = () => {
+// Search bar close
+document.querySelector('#search-form-close').onclick = () => {
     document.querySelector('#search-form').classList.remove('active');
 }
 
-content_btn.addEventListener('click', () => {
-    // content.classList.remove('active-content');
-    content.classList.add('active-content');
-    form_container.classList.add('active-form');
+// Progress section auto increment
+var reached = false;
+window.addEventListener('scroll', function () {
+    var element = document.getElementById('progress');
+    var position = element.getBoundingClientRect();
+
+    if (position.top < window.innerHeight && !reached) {
+        reached = true;
+        var counts = document.querySelectorAll('.count');
+        counts.forEach(function (counter) {
+            var max = parseInt(counter.getAttribute('max-data'));
+            var currentValue = 0;
+            var increment = max / 10;
+            var interval = 2300 / max;
+            var timer = setInterval(function () {
+                currentValue += increment;
+                if (currentValue >= max) {
+                    clearInterval(timer);
+                    currentValue = max;
+                }
+                counter.innerText = Math.round(currentValue);
+            }, interval);
+        });
+    }
 });
 
-iconClose.addEventListener('click', () => {
-    form_container.classList.remove('active-form');
-    content.classList.remove('active-content');
-    // content.classList.add('active-content');
+// Animation 
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 1000,
+    reset: true
 });
+
+sr.reveal(`.animation, .heading`, {
+    interval: 100
+})
+
+// Google Analytics
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'G-H6KFMBG8J1');
