@@ -1,3 +1,42 @@
+<?php
+
+@include('../config/config.php');
+
+session_start();
+
+if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
+    if (isset($_SESSION['admin_email'])) {
+        header('location: ../admin_panel/admin_dashboard.php');
+    } elseif (isset($_SESSION['user_email'])) {
+        header('location: ../user_panel/user_dashboard.php');
+    }
+} else {
+    if (isset($_POST['signin'])) {
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = md5($_POST['password']);
+
+
+        $select_from_table = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$password' && account_status = 'Active' ";
+        $select_from_table_results = mysqli_query($conn, $select_from_table);
+
+        if (mysqli_num_rows($select_from_table_results) > 0) {
+            $row = mysqli_fetch_array($select_from_table_results);
+
+            if ($row['user_type'] == 'admin') {
+
+                $_SESSION['admin_email'] = $email;
+                header('location: ../admin_panel/admin_dashboard.php');
+            } elseif ($row['user_type'] == 'user') {
+
+                $_SESSION['user_email'] = $email;
+                header('location: ../user_panel/user_dashboard.php');
+            }
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +82,7 @@
                 <span id="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
             </div>
 
-            <input type="submit" name="submit" value="Sign in" class="form-btn">
+            <input type="submit" name="signin" value="Sign in" class="form-btn">
 
             <div class="method">
                 <a href="#" class="method-action">

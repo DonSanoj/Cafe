@@ -1,6 +1,6 @@
 <?php
 
-@include('./config/config.php');
+@include('../config/config.php');
 
 if (isset($_POST['register'])) {
 
@@ -9,8 +9,25 @@ if (isset($_POST['register'])) {
     $password = md5($_POST['password']);
     $confirm_password = md5($_POST['cpassword']);
 
-    
+    $user_exists = "SELECT * FROM login_and_register WHERE email = '$email' ";
+    $user_exists_result = mysqli_query($conn, $user_exists);
 
+    if (mysqli_num_rows($user_exists_result) > 0) {
+        $error[] = "User already exists";
+    } else {
+        if ($password != $confirm_password) {
+            $error[] = "Password does not match";
+        } else {
+            $insert_user = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$password', 'user') ";
+            $insert_user_result = mysqli_query($conn, $insert_user);
+
+            if (mysqli_num_rows($insert_user_result) > 0) {
+                header('Location: /login_and_register/login.php');
+            } else {
+                header('Location: /login_and_register/register.php');
+            }
+        }
+    }
 }
 
 ?>

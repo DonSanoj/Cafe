@@ -6,8 +6,8 @@
     <nav class="navbar">
         <a href="/index.php">Home</a>
         <a href="/menu.php">Menu</a>
-        <a href="/contact.php">Contact Us</a>
-        <a href="/about.php">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
     </nav>
 
     <div class="icons">
