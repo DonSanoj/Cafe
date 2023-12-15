@@ -1,3 +1,20 @@
+<?php
+
+@include('./config/config.php');
+
+if (isset($_POST['register'])) {
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = md5($_POST['password']);
+    $confirm_password = md5($_POST['cpassword']);
+
+    
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +70,7 @@
                 <span id="toggle-confirm-password" onclick="toggleConfirmPassword()"><i class="fas fa-eye-slash"></i></span>
             </div>
 
-            <input type="submit" name="submit" value="register now" class="form-btn">
+            <input type="submit" name="register" value="register now" class="form-btn">
 
             <p>already have an account? <a href="/login_and_register/login.php">Sign In Now</a></p>
 

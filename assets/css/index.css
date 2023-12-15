@@ -36,10 +36,10 @@ html {
 
 /* Home section */
 .home {
-    margin-top: 70px;
+    margin-top: 60px;
     height: 100vh;
     background: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/image/Coffee\ cup.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/image/Coffee\ cup.jpg');
     background-size: cover;
 }
 
@@ -124,19 +124,19 @@ html {
 }
 
 .pop-services .flex-container .flex-box1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/web-development-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/image/Espresso.jpg');
 }
 
 .pop-services .flex-container .flex-box2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/video-animation-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/image/Cappuccino.jpg');
 }
 
 .pop-services .flex-container .flex-box3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/app-development-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/image/black\ coffee.jpeg');
 }
 
 .pop-services .flex-container .flex-box4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/graphic-design-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/image/machchiato.jpeg');
 }
 
 .pop-services .flex-container .flex-box1 h3,
@@ -218,7 +218,7 @@ html {
 
 /* Progress section */
 
-.progress{
+.progress {
     /* padding-top: 20px; */
     height: max-content;
     color: var(--bg-color);
@@ -425,4 +425,33 @@ html {
         width: 100%;
     }
 
+}
+
+
+
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
 }

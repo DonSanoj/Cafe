@@ -32,7 +32,7 @@ window.addEventListener('scroll', function () {
         counts.forEach(function (counter) {
             var max = parseInt(counter.getAttribute('max-data'));
             var currentValue = 0;
-            var increment = max / 10;
+            var increment = max / 15;
             var interval = 2300 / max;
             var timer = setInterval(function () {
                 currentValue += increment;
@@ -57,13 +57,3 @@ const sr = ScrollReveal({
 sr.reveal(`.animation, .heading`, {
     interval: 100
 })
-
-// Google Analytics
-window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-    dataLayer.push(arguments);
-}
-gtag('js', new Date());
-
-gtag('config', 'G-H6KFMBG8J1');
