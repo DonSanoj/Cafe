@@ -5,9 +5,9 @@
 
     <nav class="navbar">
         <a href="/index.php">Home</a>
-        <a href="/menu.php">Menu</a>
-        <a href="#">Contact Us</a>
-        <a href="#">About Us</a>
+        <a href="/menu.php">Services</a>
+        <a href="#">Menu</a>
+        <a href="#">Reviews</a>
     </nav>
 
     <div class="icons">
