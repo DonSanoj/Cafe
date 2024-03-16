@@ -31,7 +31,7 @@
     <?php include('./snow-falling/snow.php'); ?>
 
     <!-- Snow falling -->
-    <div id="snowfall"></div>
+    <!-- <div id="snowfall"></div> -->
 
 
     <!-- Home section start -->

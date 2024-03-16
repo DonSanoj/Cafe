@@ -78,7 +78,7 @@ if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
             </div>
 
             <div class="password">
-                <input type="password" name="password" id="password-input" placeholder="Password">
+                <input type="password" name="password" id="password-input" placeholder="Password" required>
                 <span id="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
             </div>
 
