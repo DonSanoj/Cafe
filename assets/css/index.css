@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root {
-    /* --bg-color: #0B0C10; */
-    /* --blue: #66FCF1; */
-    --bg-color: #000;
-    --header-background-color: rgba(251, 251, 253, .8);
+    /* --bg-color: #000;
+    --header-background-color: #432010;
     --hover-color: rgba(0, 0, 0, 1);
     --btn-color: rgb(41, 99, 215);
     --font-color: #fff;
     --box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
     --form-box-shadow: 0 10px 10px 10px rgb(40, 40, 40, 40);
-    --h2-font: 3rem;
+    --h2-font: 3rem; */
+
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,9 +32,24 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: 9rem;
     scroll-behavior: smooth;
     background-size: auto;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
 }
 
 /* Home section */
@@ -39,7 +57,7 @@ html {
     margin-top: 60px;
     height: 100vh;
     background: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/image/Coffee\ cup.jpg');
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/image/Coffee\ cup.jpg'); */
     background-size: cover;
 }
 

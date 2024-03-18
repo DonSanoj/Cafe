@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root {
-    --bg-color: #000;
+    /* --bg-color: #000;
     --header-background-color: #432010;
     --hover-color: rgba(0, 0, 0, 1);
     --btn-color: rgb(41, 99, 215);
     --font-color: #fff;
     --box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
     --form-box-shadow: 0 10px 10px 10px rgb(40, 40, 40, 40);
-    --h2-font: 3rem;
+    --h2-font: 3rem; */
+
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
 * {
@@ -27,24 +32,37 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: 9rem;
     scroll-behavior: smooth;
     background-size: auto;
 }
 
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
 /* Header */
 header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    background: var(--bg-color);
-    backdrop-filter: saturate(180%) blur(20px);
-    padding: 1.8rem 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
 }
 
@@ -61,18 +79,21 @@ header .logo i {
 }
 
 header .navbar a {
-    font-size: 15px;
     font-weight: 300;
-    border-radius: .5rem;
     padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
     color: var(--header-background-color);
+    margin: 0;
+    font-size: 1.6rem;
+    color: #fff;
 }
 
 header .navbar a.active,
 header .navbar a:hover {
-    color: var(--font-color);
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
 }
 
 header .icons i,
@@ -93,7 +114,7 @@ header .icons a {
 
 header .icons i:hover,
 header .icons a:hover {
-    color: var(--font-color);
+    color: var(--main-color);
 }
 
 header .icons #menu-bars {
