@@ -105,7 +105,7 @@
     <!-- About section end -->
 
     <!-- Progress section starts -->
-    <section class="progress" id="progress">
+    <!-- <section class="progress" id="progress">
 
         <div id="container">
 
@@ -139,7 +139,7 @@
 
         </div>
 
-    </section>
+    </section> -->
     <!-- Progress section end -->
 
     <!-- Review section start -->
