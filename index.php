@@ -28,12 +28,6 @@
 
     <?php include('./includes/header.php'); ?>
 
-    <?php include('./snow-falling/snow.php'); ?>
-
-    <!-- Snow falling -->
-    <!-- <div id="snowfall"></div> -->
-
-
     <!-- Home section start -->
     <section class="home" id="home">
 
