@@ -32,9 +32,10 @@
     <section class="home" id="home">
 
         <div class="intro">
-            <h1 class="animation">Coffee Please!</h1>
-            <h3 class="animation">Awaken Your Senses with Every Sip</h3>
-            <a href="/menu.php" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+            <h1 class="animation">Stir and Brew</h1>
+            <h3 class="animation">The Fresh Aroma of Coffee</h3>
+            <a href="" class="order-online">Order Online</a>
+            <a href="" class="book-table">Book a Table</a>
         </div>
 
     </section>
