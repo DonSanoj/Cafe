@@ -51,13 +51,13 @@
             <div class="flex-box1">
                 <h3 class="animation">Espresso</h3>
                 <p class="animation">Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="/sub_pages/web_design.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/web_design.php" class="btn animation">Order Now <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box2">
                 <h3 class="animation">Cappuccino</h3>
                 <p class="animation">Engage and captivate with dynamic videos and animations for storytelling.</p>
-                <a href="/sub_pages/video_animation.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/video_animation.php" class="btn animation">Order Now <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
         </div>
@@ -67,13 +67,13 @@
             <div class="flex-box3">
                 <h3 class="animation">Black Coffee</h3>
                 <p class="animation">Elevate Your Development Skills, Mastering Programming and Innovation in 2023</p>
-                <a href="/sub_pages/app_development.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/app_development.php" class="btn animation">Order Now <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box4">
                 <h3 class="animation">Macchiato</h3>
                 <p class="animation">Unlocking Creativity, Transforming Ideas into Visual Masterpieces with Graphic Design</p>
-                <a href="/sub_pages/graphic_design.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/graphic_design.php" class="btn animation">Order Now <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
         </div>
@@ -92,7 +92,7 @@
             <p class="animation">Welcome to Cafe Express, where innovation meets excellence. <br>
                 We have been dedicated to providing top-notch services to our valued customers.</p>
 
-            <a href="about_us.php" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+            <a href="about_us.php" class="animation">Order Now <i class=" fas fa-regular fa-chevron-right"></i></a>
 
         </div>
 
