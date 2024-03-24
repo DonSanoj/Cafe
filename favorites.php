@@ -2,11 +2,11 @@
 
 @include('./config/config.php');
 
-session_start();
+// session_start();
 
-if (!isset($_SESSION['user_name'])) {
-    header('location: ../login_and_register/login.php');
-}
+// if (!isset($_SESSION['user_name'])) {
+//     header('location: ../login_and_register/login.php');
+// }
 
 ?>
 

@@ -1,7 +1,4 @@
 <!-- Footer section start -->
-
-<?php @include("./config/config.php") ?>
-
 <footer class="footer">
     <div class="footer_wrapper">
 
@@ -42,12 +39,13 @@
             <div class="footer_links_column">
                 <div class="footer_links_column_title system-info">
                     <?php
+                    $conn = include('./config/config.php');  // Include the database connection file
 
                     if ($conn->connect_error) {
-                        echo "<h3><i class='fas fa-circle' style='color:#FF0000'></i></h3>"; // Red color for error
-                        echo "<h3 style='color:#FF0000'>System Error</h3>";
+                        echo "<h3><i class='fas fa-circle' style='color:#FF0000'></i></h3>"; // Red circle for error
+                        echo "<h3 style='color:#FF0000'>System Error: " . $conn->connect_error . "</h3>";
                     } else {
-                        echo "<h3><i class='fas fa-circle' style='color:#00FF00'></i></h3>"; // Green color for normal
+                        echo "<h3><i class='fas fa-circle' style='color:#00FF00'></i></h3>"; // Green circle for normal
                         echo "<h3 style='color:#00FF00'>All Systems normal</h3>";
                     }
 

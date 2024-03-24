@@ -26,7 +26,7 @@
 
 <body>
 
-    <?php include('./includes/header.php'); ?>
+    <?php @include('./includes/header.php'); ?>
 
     <!-- Home section start -->
     <section class="home" id="home">
@@ -124,7 +124,7 @@
                 </div>
                 <p class="comment">Their products are strong and long-lasting, which makes them a fantastic investment for anyone,
                     I can say with confidence.
-                    I heartily endorse WEBXEL to anyone who is searching for high-quality service.
+                    I heartily endorse Cafe to anyone who is searching for high-quality service.
                 </p>
             </div>
 
@@ -133,7 +133,7 @@
                     <img src="" class="fas fa-user">
                     <h1 class="name">Robert Daniel</h1>
                 </div>
-                <p class="comment">I am quite pleased with the calibre of WEBXEL's goods and services as a customer.
+                <p class="comment">I am quite pleased with the calibre of Cafe's goods and services as a customer.
                     They provide a wide selection of high-quality services.
                     making them my go-to place for all of my Content writing and translation requirements.</p>
             </div>
@@ -145,9 +145,7 @@
 
     <div class="space"></div>
 
-
-
-    <?php include('./includes/footer.php'); ?>
+    <?php @include('./includes/footer.php'); ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

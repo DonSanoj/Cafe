@@ -16,7 +16,7 @@ if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
         $password = md5($_POST['password']);
 
 
-        $select_from_table = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$password' && account_status = 'Active' ";
+        $select_from_table = "SELECT * FROM users WHERE email = '$email' && password = '$password' && account_status = 'Active' ";
         $select_from_table_results = mysqli_query($conn, $select_from_table);
 
         if (mysqli_num_rows($select_from_table_results) > 0) {

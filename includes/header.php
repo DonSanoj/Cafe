@@ -5,9 +5,9 @@
 
     <nav class="navbar">
         <a href="/index.php">Home</a>
-        <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#reviews">Reviews</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
 

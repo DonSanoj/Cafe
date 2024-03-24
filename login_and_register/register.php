@@ -1,35 +1,48 @@
 <?php
-
 @include('../config/config.php');
 
 if (isset($_POST['register'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['cpassword'];
 
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = md5($_POST['password']);
-    $confirm_password = md5($_POST['cpassword']);
-
-    $user_exists = "SELECT * FROM login_and_register WHERE email = '$email' ";
-    $user_exists_result = mysqli_query($conn, $user_exists);
-
-    if (mysqli_num_rows($user_exists_result) > 0) {
-        $error[] = "User already exists";
+    // Check if passwords match
+    if ($password != $confirm_password) {
+        $error[] = "Password does not match";
     } else {
-        if ($password != $confirm_password) {
-            $error[] = "Password does not match";
-        } else {
-            $insert_user = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$password', 'user') ";
-            $insert_user_result = mysqli_query($conn, $insert_user);
+        // Check if user already exists
+        $user_exists_query = "SELECT * FROM users WHERE email = ?";
+        $stmt = mysqli_prepare($conn, $user_exists_query);
+        mysqli_stmt_bind_param($stmt, 's', $email);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
 
-            if (mysqli_num_rows($insert_user_result) > 0) {
+        if (mysqli_num_rows($result) > 0) {
+            $error[] = "User already exists";
+        } else {
+            // Insert user
+            $insert_user_query = "INSERT INTO users (name, email, password, user_type) VALUES (?, ?, ?, 'user')";
+            $stmt = mysqli_prepare($conn, $insert_user_query);
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $hashed_password);
+
+            if (mysqli_stmt_execute($stmt)) {
                 header('Location: /login_and_register/login.php');
+                exit();
             } else {
-                header('Location: /login_and_register/register.php');
+                $error[] = "Error inserting user";
             }
         }
     }
 }
 
+// Handle errors here, e.g., display error messages to the user
+if (!empty($error)) {
+    foreach ($error as $msg) {
+        echo $msg . "<br>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
