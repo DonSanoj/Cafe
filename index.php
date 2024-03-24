@@ -92,50 +92,12 @@
             <p class="animation">Welcome to Cafe Express, where innovation meets excellence. <br>
                 We have been dedicated to providing top-notch services to our valued customers.</p>
 
-            <a href="about_us.php" class="animation">Order Now <i class=" fas fa-regular fa-chevron-right"></i></a>
+            <a href="about_us.php" class="animation">More Info <i class=" fas fa-regular fa-chevron-right"></i></a>
 
         </div>
 
     </section>
     <!-- About section end -->
-
-    <!-- Progress section starts -->
-    <!-- <section class="progress" id="progress">
-
-        <div id="container">
-
-            <div class="flex-container">
-
-                <div class="flex-box1">
-                    <p><span class="count" max-data="17">0</span></p>
-                    <h1>Total Countries</h1>
-                </div>
-
-                <div class="flex-box2">
-                    <p><span class="count" max-data="176">0</span></p>
-                    <h1>Total Shops</h1>
-                </div>
-
-            </div>
-
-            <div class="flex-container">
-
-                <div class="flex-box3">
-                    <p><span class="count" max-data="1263">0</span></p>
-                    <h1>Total Deliveries</h1>
-                </div>
-
-                <div class="flex-box4">
-                    <p><span class="count" max-data="23">0</span></p>
-                    <h1>Happy Customers</h1>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section> -->
-    <!-- Progress section end -->
 
     <!-- Review section start -->
     <section class="review" id="review">
@@ -145,29 +107,35 @@
         <div class="flex-container">
 
             <div class="flex-box1">
-                <p>They constantly go above and beyond to make sure I find what I'm searching for.
+                <div class="review-info">
+                    <img src="" class="fas fa-user">
+                    <h1 class="name">Michael Joseph</h1>
+                </div>
+                <p class="comment">They constantly go above and beyond to make sure I find what I'm searching for.
                     Their team is very informed and highly professional.
                     They provide excellent customer service and are always accessible to answer any queries I might
                     have.</p>
-                <h1>Michael Joseph</h1>
-                <h3>Restaurant Owner</h3>
             </div>
 
             <div class="flex-box2">
-                <p>Their products are strong and long-lasting, which makes them a fantastic investment for anyone,
-                    <br>I can say with confidence.
-                    <br>I heartily endorse WEBXEL to anyone who is searching for high-quality service.
+                <div class="review-info">
+                    <img src="" class="fas fa-user">
+                    <h1 class="name">Richard Oliver</h1>
+                </div>
+                <p class="comment">Their products are strong and long-lasting, which makes them a fantastic investment for anyone,
+                    I can say with confidence.
+                    I heartily endorse WEBXEL to anyone who is searching for high-quality service.
                 </p>
-                <h1>Richard Oliver</h1>
-                <h3>Gym Owner</h3>
             </div>
 
             <div class="flex-box3">
-                <p>I am quite pleased with the calibre of WEBXEL's goods and services as a customer.
+                <div class="review-info">
+                    <img src="" class="fas fa-user">
+                    <h1 class="name">Robert Daniel</h1>
+                </div>
+                <p class="comment">I am quite pleased with the calibre of WEBXEL's goods and services as a customer.
                     They provide a wide selection of high-quality services.
                     making them my go-to place for all of my Content writing and translation requirements.</p>
-                <h1>Robert Daniel</h1>
-                <h3>Writer</h3>
             </div>
 
         </div>

@@ -157,7 +157,7 @@ header .icons #menu-bars {
 
 #search-form #search-form-close {
     position: absolute;
-    color: var(--header-background-color);
+    color: #be701b;
     cursor: pointer;
     top: 2.5rem;
     right: 3rem;

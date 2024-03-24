@@ -1,16 +1,14 @@
 <?php
 
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "cafe";
+$host = "";
+$username = "root";
+$password = "";
+$dbname = "cafe";
 
-    $conn = new mysqli($host, $username, $password, $dbname);
+$conn = new mysqli($host, $username, $password, $dbname);
 
-    if ($conn -> connect_errno) {
-        die ("Connection Error: " . $conn -> connect_error);
-    }
+if ($conn->connect_error) {
+    die("Connection Error: " . $conn->connect_error);
+}
 
-    return $conn;
-
-?>
+return $conn;
