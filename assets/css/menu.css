@@ -42,3 +42,11 @@ html::-webkit-scrollbar-thumb {
 body {
     background: var(--bg);
 }
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-top: 5rem;
+}
