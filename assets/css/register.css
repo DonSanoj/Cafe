@@ -41,9 +41,9 @@ body {
     text-decoration: none;
 }
 
-/* signin form */
+/* Register form */
 form {
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
     background: #fff;
@@ -60,15 +60,14 @@ form input,
 form select {
     width: 80%;
     padding: 10px 15px;
-    font-size: 15px;
+    font-size: 14px;
     margin: 8px 0;
     background: #eee;
     border-radius: 5px;
-    border: none;
 }
 
 form select option {
-    background: var(--font-color);
+    background: #fff;
 }
 
 form .form-btn {
@@ -84,32 +83,11 @@ form .form-btn:hover {
     color: var(--font-color);
 }
 
-form .method {
-    margin: 0 1rem 0 1rem;
-}
-
-form .method-action {
-    margin-top: 1.5rem;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: var(--main-color);
-    text-rendering: optimizeLegibility;
-}
-
-form .method-action i {
-    color: var(--bg-color);
-    font-size: 22px;
-}
-
 form p {
-    margin-top: 18px;
-    font-size: 16px;
+    margin-top: 14px;
+    font-size: 15px;
     color: rgba(0, 0, 0, .8);
+    font-weight: 700;
 }
 
 form p a {
@@ -126,13 +104,17 @@ form .error-msg {
     padding: 10px;
 }
 
+.name,
 .email,
-.password {
+.password,
+.confirm-password {
     position: relative;
 }
 
+.name i,
 .email i,
-.password i {
+.password i,
+.confirm-password i {
     position: absolute;
     right: 20px;
     top: 50%;

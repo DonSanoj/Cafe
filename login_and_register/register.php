@@ -55,7 +55,8 @@ if (!empty($error)) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/register.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
@@ -65,8 +66,10 @@ if (!empty($error)) {
 
 <body>
 
+    <?php include('../includes/header.php') ?>
+
     <!-- Register form section start -->
-    <section class="register-form-container">
+    <!-- <section class="register-form-container"> -->
 
         <form action="" method="post">
 
@@ -102,11 +105,11 @@ if (!empty($error)) {
 
             <input type="submit" name="register" value="register now" class="form-btn">
 
-            <p>already have an account? <a href="/login_and_register/login.php">Sign In Now</a></p>
+            <p>Already have an account? <a href="/login_and_register/login.php">Sign In Now</a></p>
 
         </form>
 
-    </section>
+    <!-- </section> -->
 
     <script src="/assets/js/login.js"></script>
 

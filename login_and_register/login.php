@@ -52,50 +52,49 @@ if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
 
     <title>Cafe Express - Login</title>
 </head>
 
 <body>
 
-    <section class="signin-form-container">
+    <?php include('../includes/header.php'); ?>
 
-        <form action="" method="post">
+    <form action="" method="post">
 
-            <h3>Sign in to Cafe Express</h3>
+        <h3>Sign in to Cafe.</h3>
 
-            <?php
-            if (isset($error)) {
-                foreach ($error as $error) {
-                    echo '<span class="error-msg">' . $error . '</span>';
-                };
+        <?php
+        if (isset($error)) {
+            foreach ($error as $error) {
+                echo '<span class="error-msg">' . $error . '</span>';
             };
-            ?>
+        };
+        ?>
 
-            <div class="email">
-                <input type="email" name="email" placeholder="Email" required>
-                <span><i class='bx bxs-envelope'></i></span>
-            </div>
+        <div class="email">
+            <input type="email" name="email" placeholder="Email" required>
+            <span><i class='bx bxs-envelope'></i></span>
+        </div>
 
-            <div class="password">
-                <input type="password" name="password" id="password-input" placeholder="Password" required>
-                <span id="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
-            </div>
+        <div class="password">
+            <input type="password" name="password" id="password-input" placeholder="Password" required>
+            <span id="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+        </div>
 
-            <input type="submit" name="signin" value="Sign in" class="form-btn">
+        <input type="submit" name="signin" value="Sign in" class="form-btn">
 
-            <div class="method">
-                <a href="#" class="method-action">
-                    <i class='bx bxl-google'></i>
-                    <span>Sign in with Google</span>
-                </a>
-            </div>
+        <div class="method">
+            <a href="#" class="method-action">
+                <i class='bx bxl-google'></i>
+                <span>Sign in with Google</span>
+            </a>
+        </div>
 
-            <p>Don't have an account? <a href="/login_and_register/register.php">Create Now</a></p>
+        <p>Don't have an account? <a href="/login_and_register/register.php">Create Now</a></p>
 
-        </form>
-
-    </section>
+    </form>
 
     <script src="/assets/js/login.js"></script>
 
