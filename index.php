@@ -34,7 +34,7 @@
         <div class="intro">
             <h1 class="animation">Stir and Brew</h1>
             <h3 class="animation">The Fresh Aroma of Coffee</h3>
-            <a href="" class="order-online">Order Online</a>
+            <a href="/menu.php" class="order-online">Order Online</a>
             <a href="" class="book-table">Book a Table</a>
         </div>
 
