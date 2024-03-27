@@ -60,7 +60,7 @@
         <hr>
 
         <div class="footer-copyright">
-            <p>Copyright © Cafe. 2023</p>
+            <p>Copyright © Cafe. 2023 | <a href="https://github.com/DonSanoj">Don Sanoj</a></p>
         </div>
     </div>
 

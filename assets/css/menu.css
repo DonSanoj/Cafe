@@ -4,6 +4,7 @@
     --main-color: #be701b;
     --black: #13131a;
     --bg: #010103;
+    --light-color: #666;
     --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
@@ -44,9 +45,107 @@ body {
 }
 
 .heading {
-    font-size: 2.5rem;
+    font-size: 38px;
     font-weight: 600;
     color: #fff;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 10rem;
+}
+
+.box-container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, .5fr));
+    gap: 2rem;
+}
+
+.box-container .menu-item {
+    padding: 2.5rem;
+    position: relative;
+    background-image: white;
+    border: .2rem solid rgba(249, 247, 247, 0.2);
+    border-radius: 1rem;
+    box-shadow: var(--main-color);
+}
+
+.box-container .menu-item .image {
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.box-container .menu-item .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.box-container .menu-item .image .fa-heart {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.box-container .menu-item .image .fa-heart:hover {
+    background: #fff;
+    color: var(--main-color);
+}
+
+.box-container .menu-item .content {
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.box-container .menu-item .content .stars {
+    padding-bottom: 1rem;
+}
+
+.box-container .menu-item .content .stars i {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.box-container .menu-item .content h3 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.box-container .menu-item .content p {
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+
+.box-container .menu-item .content .price {
+    color: var(--main-color);
+    margin-left: 1rem;
+    font-size: 2.0rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--main-color);
 }

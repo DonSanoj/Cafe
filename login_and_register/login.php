@@ -1,7 +1,8 @@
 <?php
 
-@include('../config/config.php');
+include('../config/config.php');
 
+// Start session
 session_start();
 
 if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
@@ -11,26 +12,39 @@ if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
         header('location: ../user_panel/user_dashboard.php');
     }
 } else {
+    // Process login form submission
     if (isset($_POST['signin'])) {
         $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $password = md5($_POST['password']);
+        $password = $_POST['password'];
 
+        // Fetch user from database using prepared statement
+        $select_user_query = "SELECT * FROM users WHERE email = ?";
+        $stmt = mysqli_prepare($conn, $select_user_query);
+        mysqli_stmt_bind_param($stmt, 's', $email);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
 
-        $select_from_table = "SELECT * FROM users WHERE email = '$email' && password = '$password' && account_status = 'Active' ";
-        $select_from_table_results = mysqli_query($conn, $select_from_table);
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
 
-        if (mysqli_num_rows($select_from_table_results) > 0) {
-            $row = mysqli_fetch_array($select_from_table_results);
-
-            if ($row['user_type'] == 'admin') {
-
-                $_SESSION['admin_email'] = $email;
-                header('location: ../admin_panel/admin_dashboard.php');
-            } elseif ($row['user_type'] == 'user') {
-
-                $_SESSION['user_email'] = $email;
-                header('location: ../user_panel/user_dashboard.php');
+            // Verify password using password_verify
+            if (password_verify($password, $row['password']) && $row['account_status'] === 'Active') {
+                if ($row['user_type'] == 'admin') {
+                    $_SESSION['admin_email'] = $email;
+                    header('location: ../admin_panel/admin_dashboard.php');
+                    exit();
+                } elseif ($row['user_type'] == 'user') {
+                    $_SESSION['user_email'] = $email;
+                    header('location: ../user_panel/user_dashboard.php');
+                    exit();
+                }
+            } else {
+                // Invalid credentials or account inactive
+                $error = "Invalid credentials or account inactive";
             }
+        } else {
+            // User not found
+            $error = "User not found";
         }
     }
 }
@@ -54,6 +68,9 @@ if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
     <link rel="stylesheet" href="/assets/css/login.css">
     <link rel="stylesheet" href="/assets/css/header.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
     <title>Cafe Express - Login</title>
 </head>
 
@@ -65,13 +82,9 @@ if (isset($_SESSION['user_email']) || isset($_SESSION['admin_email'])) {
 
         <h3>Sign in to Cafe.</h3>
 
-        <?php
-        if (isset($error)) {
-            foreach ($error as $error) {
-                echo '<span class="error-msg">' . $error . '</span>';
-            };
-        };
-        ?>
+        <?php if (isset($error)) : ?>
+            <p><?php echo '<span class="error-msg">' . $error . '</span>'; ?></p>
+        <?php endif; ?>
 
         <div class="email">
             <input type="email" name="email" placeholder="Email" required>

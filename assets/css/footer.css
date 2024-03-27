@@ -115,6 +115,11 @@ footer {
     position: relative;
 }
 
+.footer-copyright a {
+    text-decoration: none; 
+    color: var(--main-color);
+}
+
 hr {
     width: 100%;
     border: 0;
