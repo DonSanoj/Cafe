@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
-    <title>Cafe Express</title>
+    <title>Cafe</title>
 
 </head>
 
@@ -35,7 +35,7 @@
             <h1 class="animation">Stir and Brew</h1>
             <h3 class="animation">The Fresh Aroma of Coffee</h3>
             <a href="/menu.php" class="order-online">Order Online</a>
-            <a href="" class="book-table">Book a Table</a>
+            <a href="/bookTable.php" class="book-table">Book a Table</a>
         </div>
 
     </section>

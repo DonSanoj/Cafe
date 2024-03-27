@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
-    <title>Cafe Express | Menu</title>
+    <title>Cafe | Menu</title>
 </head>
 
 <body>
@@ -30,49 +30,369 @@
 
         <h1 class="heading animation">Our Menu</h1>
 
-        <div class="menu-container">
+        <div class="box-container">
 
             <div class="menu-item">
-                <img src="/assets/images/menu/espresso.jpg" alt="Espresso">
-                <h3>Espresso</h3>
-                <p>Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="/sub_pages/web_design.php" class="btn">Order Now <i class="fas fa-chevron-right"></i></a>
+
+                <div class="image">
+                    <img src="/assets/image/Americano.jpg" alt="Espresso">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Espresso</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
             </div>
 
             <div class="menu-item">
-                <img src="/assets/images/menu/cappuccino.jpg" alt="Cappuccino">
-                <h3>Cappuccino</h3>
-                <p>Engage and captivate with dynamic videos and animations for storytelling.</p>
-                <a href="/sub_pages/video_animation.php" class="btn">Order Now <i class="fas fa-chevron-right"></i></a>
+
+                <div class="image">
+                    <img src="/assets/image/black coffee.jpeg" alt="Cappuccino">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
             </div>
 
             <div class="menu-item">
-                <img src="/assets/images/menu/latte.jpg" alt="Latte">
-                <h3>Latte</h3>
-                <p>Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="/sub_pages/web_design.php" class="btn">Order Now <i class="fas fa-chevron-right"></i></a>
+
+                <div class="image">
+                    <img src="/assets/image/Cappuccino.jpg" alt="Latte">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
             </div>
 
             <div class="menu-item">
-                <img src="/assets/images/menu/americano.jpg" alt="Americano">
-                <h3>Americano</h3>
-                <p>Engage and captivate with dynamic videos and animations for storytelling.</p>
-                <a href="/sub_pages/video_animation.php" class="btn">Order Now <i class="fas fa-chevron-right"></i></a>
+
+                <div class="image">
+                    <img src="/assets/image/close-up-coffee-cup-wooden-table-steam-rising-generative-ai.jpg" alt="Americano">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
             </div>
 
             <div class="menu-item">
-                <img src="/assets/images/menu/mocha.jpg" alt="Mocha">
-                <h3>Mocha</h3>
-                <p>Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="/sub_pages/web_design.php" class="btn">Order Now <i class="fas fa-chevron-right"></i></a>
+
+                <div class="image">
+                    <img src="/assets/image/coffee1.jpeg" alt="Mocha">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
             </div>
 
             <div class="menu-item">
-                <img src="/assets/images/menu/macchiato.jpg" alt="Macchiato">
-                <h3>Macchiato</h3>
-                <p>Engage and captivate with dynamic videos and animations for storytelling.</p>
-                <a href="/sub_pages/video_animation.php" class="btn">Order Now <i class="fas fa-chevron-right"></i></a>
+
+                <div class="image">
+                    <img src="/assets/image/coffee2.jpeg" alt="Macchiato">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
             </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/coffee3.jpeg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/coffee4.jpeg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/cup-coffee-with-heart-drawn-foam.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/Espresso-1.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/Espresso.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/from-latte-with-cinnamon-chocolate-chips-grape-branch-glass-cup.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/Iced Coffee.jpeg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/machchiato.jpeg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="image">
+                    <img src="/assets/image/cup-hot-latte-with-froth-cream.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Coffee</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, asperiores?
+                    </p>
+                    <a href="#" class="btn">Add to cart</a>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+        </div>
 
     </section>
 
