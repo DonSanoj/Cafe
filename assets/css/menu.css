@@ -42,6 +42,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
     background: var(--bg);
+    scroll-behavior: smooth;
 }
 
 .heading {
@@ -49,5 +50,103 @@ body {
     font-weight: 600;
     color: #fff;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--light-color);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: var(--main-color);
+}
+
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.menu .box-container .menu-item {
+    padding: 2.5rem;
+    position: relative;
+    background-image: #fff;
+    border: .1rem solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: var(--black);
+}
+
+.menu .box-container .menu-item .image {
+    height: 30rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu .box-container .menu-item .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 4rem;
+    object-fit: cover;
+}
+
+.menu .box-container .menu-item .image .fa-heart {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.menu .box-container .menu-item .image .fa-heart:hover {
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+.menu .box-container .menu-item .content {
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.menu .box-container .menu-item .content .stars{
+    padding-bottom: 1rem;
+}
+
+.menu .box-container .menu-item .content .stars i {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.menu .box-container .menu-item .content h3 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.menu .box-container .menu-item .content p {
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+
+.menu .box-container .menu-item .content .price {
+    color: var(--main-color);
+    margin-left: 1rem;
+    font-size: 2.0rem;
 }
